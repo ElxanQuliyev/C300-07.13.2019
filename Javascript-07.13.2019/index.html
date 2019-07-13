@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .item{
+            background: coral;
+            color:#fff;
+            font-size: 18px;
+        }
+        .item i{
+            margin-left: 35px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a58d6456cd.js"></script>
+
+</head>
+<body>
+    <div id="all">
+      
+    </div>
+    <input id="nm" type="text" placeholder="Textler">
+  
+
+    <input id="btn" type="submit" value="Əlavə et">
+  <script>
+    var btn=document.getElementById("btn")
+    var all=document.getElementById("all")
+  
+    
+    btn.onclick=function(){
+    var text=document.getElementById("nm").value
+    var ptag= document.createElement("p");
+    var itag= document.createElement("i");
+    itag.className="far fa-trash-alt";
+    ptag.classList.add("item");
+
+    ptag.innerText=text;
+    ptag.appendChild(itag)
+    all.appendChild(ptag)
+    document.getElementById("nm").value=""
+            for(var i=0;i<all.children.length;i++){
+             
+                all.children[i].onclick=function(){
+                     
+                    }
+            }
+        }
+  
+    /* ********************************************* */  
+    //   var ptag=document.getElementById("demo")
+    //   var btn=document.getElementById("btn")
+    //     btn.onclick=function(){
+    //         var username=document.getElementById("nm").value
+    //         var pas=document.getElementById("pwd").value
+    //         if(username=="Admin" && pas=="12345"){
+    //            ptag.innerHTML="<h1>Xoş geldin Admin</h1>"
+    //         }
+    //         else{
+    //            ptag.innerHTML="User adi ve ya parolu duzgun deyil"
+    //         }
+            
+    //     }
+    
+//   for(var i=0;i<=10;i++){
+//      if(i%2!=0){
+//          console.log(i);
+         
+//      }
+      
+//   }
+     
+    //   btn.onclick= function (){
+    //     document.getElementById('demo').innerText=Math.floor(Math.random() * 100);
+    //   }
+ 
+  </script>
+</body>
+</html>
